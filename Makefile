@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2010-2015 OpenWrt.org
 # Copyright (C) 2017      Micha LaQua
-# Copyright (C) 2018      TDFKAOlli
+# Copyright (C) 2018-2019 TDFKAOlli
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -10,16 +10,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=knockd
-PKG_VERSION:=0.7.8
-PKG_RELEASE:=2
+PKG_VERSION:=0.8
+PKG_RELEASE:=1
 
 PKG_BUILD_DEPENDS:=libpcap
 PKG_BUILD_DIR:=$(BUILD_DIR)/knockd-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/jvinet/knock.git
-PKG_SOURCE_VERSION:=258a27e5a47809f97c2b9f2751a88c2f94aae891
-PKG_SOURCE_DATE:=2015-12-27
+PKG_SOURCE_URL:=https://github.com/TDFKAOlli/knock.git
+PKG_SOURCE_VERSION:=91bb0b2f70e4302ba2c36d9f055c48c6368a7dbe
+PKG_SOURCE_DATE:=2019-01-02
+PKG_MIRROR_HASH:=61eec8f92f31a3f39cb2a8e80210ecabaece9f9aecf1c8460ba09bb408bf8bb5
 PKG_FIXUP:=autoreconf
 
 PKG_MAINTAINER:=milaq <micha.laqua@gmail.com>
@@ -33,7 +34,7 @@ define Package/knockd
   CATEGORY:=Network
   SUBMENU:=Firewall
   DEPENDS:=+libpcap
-  URL:=https://github.com/jvinet/knock
+  URL:=https://github.com/TDFKAOlli/knock
 endef
 
 define Package/knockd/description
@@ -50,7 +51,7 @@ define Package/knockd/description
 endef
 
 define Package/knockd/conffiles
-  /etc/config/knockd
+/etc/config/knockd
 endef
 
 define Build/Configure
@@ -67,6 +68,7 @@ define Build/Compile
 		all install
 endef
 
+# *** Install ***
 define Package/knockd/preinst
 	#!/bin/sh
 	# if NOT run buildroot then stop service
