@@ -1,8 +1,8 @@
 # Knockd for OpenWrt/LEDE
 
-Tested with LEDE v18.06.1 for ar71xx
+Tested with LEDE v18.06.1 for arm_cortext_a9
 
-Built from latest git version 0.7.8.
+Built from latest git version 0.8 from TDFKAOlli fork.
 
 Be advised that the upstream project is more or less unmaintained. This does _not_ mean you can't use knockd in production, but to think about it carefully. But if other, modern portknocking solutions feel too cumbersome for you, knockd may exactly be what you need.
 
