@@ -46,7 +46,7 @@ start_service() {
 
         config_foreach knockd_rule_add rule
 
-        procd_set_param command /usr/sbin/knockd
+        procd_set_param command /usr/sbin/knockd -s
         procd_append_param command -c $CONFIGFILE
         procd_set_param file $CONFIGFILE
         procd_set_param respawn
