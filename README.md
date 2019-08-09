@@ -1,8 +1,8 @@
 # Knockd for OpenWrt/LEDE
 
-Tested with LEDE v18.06.1 for arm_cortext_a9
+Tested with LEDE v18.06.4 for arm_cortext_a9
 
-Built from latest git version 0.8 from TDFKAOlli fork.
+Built from latest git version 0.8.1 from TDFKAOlli fork.
 
 Be advised that the upstream project is more or less unmaintained. This does _not_ mean you can't use knockd in production, but to think about it carefully. But if other, modern portknocking solutions feel too cumbersome for you, knockd may exactly be what you need.
 
@@ -26,7 +26,7 @@ Get the LEDE source and checkout the latest revision:
 ````
 git clone https://git.lede-project.org/source.git lede
 cd lede
-git checkout v18.06.1
+git checkout v18.06.4
 ````
 
 Get package for knockd:
@@ -56,6 +56,7 @@ make package/knockd/compile
 
 Get the built ipk from:
 ````
+bin/packages/arm_cortex-a9_vfpv3/base/knockd_<VERSION>.ipk
 bin/packages/mips_24kc/base/knockd_<VERSION>.ipk
 ````
 
