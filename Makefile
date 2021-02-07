@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2010-2015 OpenWrt.org
 # Copyright (C) 2017      Micha LaQua
-# Copyright (C) 2018-2019 TDFKAOlli
+# Copyright (C) 2018-2021 TDFKAOlli
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -10,7 +10,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=knockd
-PKG_VERSION:=0.8.1
+PKG_VERSION:=0.8.2
 PKG_RELEASE:=3
 
 PKG_BUILD_DEPENDS:=libpcap
@@ -18,8 +18,8 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/knockd-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/TDFKAOlli/knock.git
-PKG_SOURCE_VERSION:=1f77a3fd54e949b5c747dc80a3b2d77ba781c337
-PKG_SOURCE_DATE:=2020-06-28
+PKG_SOURCE_VERSION:=58a2ed4585af7c7bd9b19bfd82e3f2fa522c0a42
+PKG_SOURCE_DATE:=2021-02-07
 PKG_MIRROR_HASH:=
 PKG_FIXUP:=autoreconf
 
